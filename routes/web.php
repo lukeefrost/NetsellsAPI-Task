@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/calculation', function () {
+    return view('calculationconverter');
+});
+
+Route::get('/convertedintegers', function () {
+    return view('convertedintegers');
+});
+
+Route::get('/topten', function () {
+    return view('top10integers');
+});
