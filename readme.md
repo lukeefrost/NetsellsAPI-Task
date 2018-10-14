@@ -6,3 +6,5 @@ This development task is based on the Roman Numeral code kata which may have alr
  2. Lists all of the recently converted integers. http://127.0.0.1:8000/conversions
  3. Lists the top 10 converted integers. http://127.0.0.1:8000/top10integers
 
+### Errors/Problems
+ 1. I attempted to put form validation on any number entered below 1 or above 4000. This doesn't work, However there isn't much of a   problem as it doesn't register the details in the database.
