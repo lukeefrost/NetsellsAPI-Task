@@ -3,9 +3,6 @@
 @section('content')
 
             <div class="content">
-                <div class="title m-b-md">
-                    Converting Integers to Roman Numerals
-            </div>
 
             <div class="searchBox">
               <h1>
@@ -21,10 +18,7 @@
                       <strong>Integer:</strong>
                       <textarea name="integerVariable" class="form-control"></textarea>
                   </div>
-
-                  <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                     <button type="submit" class="btn btn-primary">Convert</button>
-                  </div>
                 </div>
             </form>
 
