@@ -11,6 +11,7 @@ class Conversion extends Model
     public $timestamps = false;
 
     public function Numeral() {
+      // Has a One to One Relationship with the RomanNumeral Model
       return $this->belongsTo(RomanNum::class);
     }
 
