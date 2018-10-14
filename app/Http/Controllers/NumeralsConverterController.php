@@ -16,7 +16,7 @@ class NumeralsConverterController extends Controller
   public function index(Request $request) {
       $SearchVal = $request->get('integerVariable'); // Get search term from the search box
       $search = $SearchVal / 1000;
-      $thousand = intval($search);
+      $thousand = intval($search); // Using intval function to calculate the integer for conversion
       $search2 = ($SearchVal - ($thousand * 1000)) / 100;
       $hundred = intval($search2);
       $search3 = ($SearchVal - (($thousand * 1000) + ($hundred * 100))) /10;
