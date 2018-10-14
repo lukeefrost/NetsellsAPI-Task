@@ -2,13 +2,13 @@
 
 @section('content')
 
-            <div class="content">
+      <div class="content">
 
-            <div class="searchBox">
-              <h1>
-                Type in an Integer for Conversion
-              </h1>
-            </div>
+        <div class="searchBox">
+          <h1>
+            Type in an Integer for Conversion
+          </h1>
+      </div>
 
             <div class="row">
             <form action="/calculationconverter/search" method="POST">
@@ -21,8 +21,6 @@
                     <button type="submit" class="btn btn-primary">Convert</button>
                 </div>
             </form>
-
-
-              </div>
-            </div>
+   </div>
+</div>
 @endsection

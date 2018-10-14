@@ -7,8 +7,7 @@ use App\Conversion;
 
 class NumeralsConverterController extends Controller
 {
-
-    public function index(Request $request) {
+  public function index(Request $request) {
       $SearchVal = $request->get('integerVariable');
       $search = $SearchVal / 1000;
       $thousand = intval($search);
@@ -47,19 +46,19 @@ class NumeralsConverterController extends Controller
 
     else{
       $RomanNum = "Enter a numeral for conversion below 4000";
+     }
+
+     return view('convertedIntegers', compact('SearchVal', 'RomanNum'));
+
     }
 
-    return view('convertedIntegers', compact('SearchVal', 'RomanNum'));
-
+     public function lastConversions(Request $request){
+        $conversion = Conversion::orderBy('lastConversion', 'desc')->take(10)->get();
+        return view('conversions', compact('conversion'));
     }
 
-    public function lastConversions(Request $request){
-      $conversion = Conversion::orderBy('lastConversion', 'desc')->take(10)->get();
-      return view('conversions', compact('conversion'));
-    }
-
-    public function topTen(Request $request){
-      $conversion = Conversion::orderBy('NumberOfTimesConverted', 'desc')->take(10)->get();
-      return view('top10integers', compact('conversion'));
+     public function topTen(Request $request){
+        $conversion = Conversion::orderBy('NumberOfTimesConverted', 'desc')->take(10)->get();
+        return view('top10integers', compact('conversion'));
     }
 }
