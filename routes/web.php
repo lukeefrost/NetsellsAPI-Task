@@ -31,6 +31,6 @@ Route::get('/topten', function () {
     return view('top10integers');
 });
 
-Route::get('/conversions', 'NumeralsConverterController@showRecent');
-Route::get('/top10integers', 'NumeralsConverterController@showTop');
+Route::get('/conversions', 'NumeralsConverterController@lastConversions');
+Route::get('/top10integers', 'NumeralsConverterController@topTen');
 Route::post('/calculationconverter/search', 'NumeralsConverterController@index');

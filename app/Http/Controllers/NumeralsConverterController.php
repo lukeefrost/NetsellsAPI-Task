@@ -52,4 +52,14 @@ class NumeralsConverterController extends Controller
     return view('convertedIntegers', compact('SearchVal', 'RomanNum'));
 
     }
+
+    public function lastConversions(Request $request){
+      $conversion = Conversion::orderBy('lastConversion', 'desc')->take(10)->get();
+      return view('conversions', compact('conversion'));
+    }
+
+    public function topTen(Request $request){
+      $conversion = Conversion::orderBy('NumberOfTimesConverted', 'desc')->take(10)->get();
+      return view('top10integers', compact('conversion'));
+    }
 }
