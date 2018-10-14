@@ -23,6 +23,14 @@ Route::get('/convertedintegers', function () {
     return view('convertedintegers');
 });
 
+Route::get('/conversions', function () {
+    return view('conversions');
+});
+
 Route::get('/topten', function () {
     return view('top10integers');
 });
+
+Route::get('/conversions', 'NumeralsConverterController@showRecent');
+Route::get('/top10integers', 'NumeralsConverterController@showTop');
+Route::post('/calculationconverter/search', 'NumeralsConverterController@index');
